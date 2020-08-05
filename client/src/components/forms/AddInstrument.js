@@ -51,20 +51,6 @@ const AddInstrument = () => {
           artistId,
         },
       },
-      update: (proxy, { data: { addInstrument } }) => {
-        const data = proxy.readQuery({
-          query: GET_INSTRUMENTS,
-          variables: { artistId: artistId },
-        });
-        proxy.writeQuery({
-          query: GET_INSTRUMENTS,
-          variables: { artistId: artistId },
-          data: {
-            ...data,
-            instruments: [...data.instruments, addInstrument],
-          },
-        });
-      },
     });
   };
 
