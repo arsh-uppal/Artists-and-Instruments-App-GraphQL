@@ -52,6 +52,7 @@ const AddInstrument = () => {
         },
       },
     });
+    window.location.reload();
   };
 
   return (
